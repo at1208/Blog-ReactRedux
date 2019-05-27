@@ -1,14 +1,12 @@
 import { combineReducers } from 'redux';
-import FetchData from '../actions'
 
-const apiReducer =(oldlist, action)=>{
-  if(action.type==='CREATE API'){
+const FetchdataReducer =(oldlist=[], action)=>{
+  if(action.type==='POST_LIST'){
     return action.payload
   }
-  return null
+  return oldlist
 }
 
- const dataapi = combineReducers({
-  data:apiReducer
+ export default combineReducers({
+  data: FetchdataReducer
 })
-export default dataapi;
