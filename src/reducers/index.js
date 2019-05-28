@@ -10,3 +10,4 @@ const FetchdataReducer =(oldlist=[], action)=>{
  export default combineReducers({
   data: FetchdataReducer
 })
+ 
